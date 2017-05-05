@@ -1,0 +1,33 @@
+{
+  "name": "@buildium/angular-walkme",
+  "version": "1.0.0-0",
+  "description": "An AngularJS module for interfacing with the WalkMe API",
+  "main": "src/module.js",
+  "scripts": {
+    "pretest": "semistandard",
+    "test": "echo \"No tests yet!\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/buildium/angular-walkme.git"
+  },
+  "keywords": [
+    "angular",
+    "walkme",
+    "api"
+  ],
+  "author": "Buildium <buidiumadmin@buildium.com",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/buildium/angular-walkme#readme",
+  "devDependencies": {
+    "angular": "1.6.4",
+    "semistandard": "11.0.0"
+  },
+  "peerDependencies": {
+    "angular": ">=1.0.8"
+  },
+  "dependencies": {
+    "es6-promise": "4.1.0",
+    "lodash": "4.17.4"
+  }
+}
