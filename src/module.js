@@ -20,28 +20,28 @@ angular.module(moduleName, [])
   const provider = this;
   let editorSnippetUrl;
 
-    /**
-     * @ngdoc method
-     * @name AngularWalkMeProvider#setEditorSnippetUrl
-     * @param {String} url - the snippet url from the WalkMe editor
-     */
+  /**
+   * @ngdoc method
+   * @name AngularWalkMeProvider#setEditorSnippetUrl
+   * @param {String} url - the snippet url from the WalkMe editor
+   */
   provider.setEditorSnippetUrl = function setEditorSnippetUrl (url) {
     editorSnippetUrl = url;
   };
 
-    /**
-     * @ngdoc service
-     * @name AngularWalkMe
-     */
+  /**
+   * @ngdoc service
+   * @name AngularWalkMe
+   */
   provider.$get = function AngularWalkMeFactory () {
     const factory = cloneDeep(WalkMeWrapper);
 
-        /**
-         * @ngdoc method
-         * @name AngularWalkMe#runSnippet
-         * @description
-         * Runs a piece of javascript code that allows WalkMe to run in the application
-         */
+    /**
+     * @ngdoc method
+     * @name AngularWalkMe#runSnippet
+     * @description
+     * Runs a piece of javascript code that allows WalkMe to run in the application
+     */
     factory.runSnippet = function runSnippet () {
       WalkMeWrapper.runSnippet(editorSnippetUrl);
     };
