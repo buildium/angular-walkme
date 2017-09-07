@@ -54,6 +54,7 @@
     "angular": ">=1.0.8"
   },
   "dependencies": {
+    "babelify": "7.3.0",
     "es6-promise": "4.1.0",
     "lodash": "4.17.4"
   },
