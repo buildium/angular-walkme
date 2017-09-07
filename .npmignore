@@ -3,3 +3,4 @@ karma.conf.js
 docs/
 !dist/
 src/
+test/
