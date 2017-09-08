@@ -11,10 +11,7 @@
     "compile": "babel src --out-dir lib/ --presets=es2015",
     "predist": "mkdirp dist",
     "dist": "browserify lib/module.js -o dist/buildium-angular-walkme.js",
-    "docs": "node .build/docs.js",
-    "docs:publish": "npm run docs -- --gh-pages",
-    "prepublish": "npm run compile && npm run dist",
-    "version": "npm run docs:publish"
+    "prepublish": "npm run compile && npm run dist"
   },
   "repository": {
     "type": "git",
@@ -29,7 +26,6 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/buildium/angular-walkme#readme",
   "devDependencies": {
-    "@buildium/angular-docs": "github:buildium/angular-docs",
     "angular": "1.6.4",
     "angular-mocks": "1.6.4",
     "babel-cli": "6.24.0",
