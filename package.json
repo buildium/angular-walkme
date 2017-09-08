@@ -10,7 +10,9 @@
     "test": "karma start --single-run",
     "compile": "babel src --out-dir lib/ --presets=es2015",
     "predist": "mkdirp dist",
-    "dist": "browserify lib/module.js -o dist/buildium-angular-walkme.js",
+    "dist:angular": "browserify lib/module.js -o dist/buildium-angular-walkme.js",
+    "dist:wrapper": "browserify lib/wrapper.js -o dist/buildium-walkme-wrapper.js",
+    "dist": "npm run dist:angular && npm run dist:wrapper",
     "prepublish": "npm run compile && npm run dist"
   },
   "repository": {
