@@ -62,7 +62,7 @@ let afterApiLoad = function afterApiLoad (fn) {
 
   return function isLoaded () {
     let args = arguments;
-    return isLoadedPromise.then(() => fn.apply(null, args));
+    return isLoadedPromise.then(() => fn.apply(null, args)).catch(() => false);
   };
 };
 
