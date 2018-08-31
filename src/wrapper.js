@@ -87,7 +87,7 @@ wrapper.startVisionsRecording = function startVisionsRecording() {
   if(WalkMeInsightsAPI) {
     WalkMeInsightsAPI.startPlaybackRecording()
   } else {
-    throw "Api not loaded.";
+    throw "Visions API not loaded.";
   }
 };
 
