@@ -83,6 +83,14 @@ wrapper.startWalkthrough = afterApiLoad(function (id) {
 
 wrapper.isLoaded = afterApiLoad(() => true);
 
+wrapper.startVisionsRecording = function startVisionsRecording() {
+  if(WalkMeInsightsAPI) {
+    WalkMeInsightsAPI.startPlaybackRecording()
+  } else {
+    throw "Api not loaded.";
+  }
+};
+
 let eventSubscribers = Object.keys(wrapper.Event).reduce((subscribers, event) => {
   subscribers[event] = [];
   return subscribers;
