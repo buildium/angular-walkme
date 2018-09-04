@@ -85,7 +85,10 @@ wrapper.isLoaded = afterApiLoad(() => true);
 
 wrapper.startVisionsRecording = function startVisionsRecording() {
   if(WalkMeInsightsAPI) {
-    WalkMeInsightsAPI.startPlaybackRecording()
+    //only call if recorded session isn't already started
+    if (WalkMeInsightsAPI.state && WalkMeInsightsAPI.state.isRecording) {
+      WalkMeInsightsAPI.startPlaybackRecording()
+    }
   } else {
     throw "Visions API not loaded.";
   }
