@@ -84,7 +84,7 @@ wrapper.startWalkthrough = afterApiLoad(function (id) {
 wrapper.isLoaded = afterApiLoad(() => true);
 
 wrapper.startVisionsRecording = function startVisionsRecording() {
-  if(WalkMeInsightsAPI) {
+  if (WalkMeInsightsAPI) {
     WalkMeInsightsAPI.startPlaybackRecording()
   } else {
     throw "Visions API not loaded.";
