@@ -1,4 +1,4 @@
-/* globals WalkMeAPI, _walkMe */
+/* globals WalkMeAPI, _walkMe, WalkMeInsightsAPI */
 'use strict';
 
 const Promise = require('es6-promise').Promise;
@@ -83,11 +83,11 @@ wrapper.startWalkthrough = afterApiLoad(function (id) {
 
 wrapper.isLoaded = afterApiLoad(() => true);
 
-wrapper.startVisionsRecording = function startVisionsRecording() {
+wrapper.startVisionsRecording = function startVisionsRecording () {
   if (WalkMeInsightsAPI) {
-    WalkMeInsightsAPI.startPlaybackRecording()
+    WalkMeInsightsAPI.startPlaybackRecording();
   } else {
-    throw "Visions API not loaded.";
+    throw new Error('Visions API not loaded.');
   }
 };
 
